@@ -1,0 +1,10 @@
+\ProvidesFile{nkz.lco}
+
+%\setkomavar{mysignature}{Name inkl. Akad. Grade und Titel}
+%\setkomavar{myname}{Fachschafsrat Mathematik}
+\setkomavar{myroom}{Rh41 Zi. 001}
+\setkomavar{myphone}{0371 531 16200}
+%\setkomavar{myfax}{Durchwahl Fax}
+\setkomavar{myemail}{fsrmathe@tu-chemnitz.de}
+
+\endinput

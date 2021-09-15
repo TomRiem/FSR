@@ -1,0 +1,441 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Anwendungsbeispiel für das Beamer-Template TU Chemnitz                      %
+% (c) Mario Haustein (mario.haustein@hrz.tu-chemnitz.de), 2013-2014           %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+% zusätzliche Schriftzeichen der American Mathematical Society
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{amsthm}
+\usepackage{faktor}
+\usepackage{mathtools}
+\usepackage{bm}
+% TUC-Templates laden.
+\usetheme[fakcolor=ma]{tuc2019}
+\newcommand{\function}[3]{#1: #2 \longrightarrow #3}
+\newcommand{\stern}{\left( \ast \right)}
+\newcommand{\integral}[4]{\int_{#1}^{#2} #3 \mathrm{d}#4}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\NN}{2\mathbb{N}}
+\newcommand{\produkt}[2]{\prod_{#1}^{#2}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\sinc}[1]{\mathrm{sinc}\left( #1 \right)}
+\newcommand{\bs}{\bm}
+\newcommand{\summe}[2]{\sum_{#1}^{#2}}
+\newcommand{\mi}{\mathrm{i}}
+\newcommand{\D}{\mathbb{T}}
+\newcommand{\I}[2]{I_{#1}^{(#2)}}
+\newcommand*\ematrix[5]{\begin{pmatrix}#1\end{pmatrix}_{#2,#4}^{\ \mathclap{#3}\hphantom{#2}#5}}
+\newcommand{\vektor}[3]{\left( #1 \right)_{#2}^{#3}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\num}[1]{\left\{1,2,\dots ,#1\right\} }
+\newcommand{\order}[2]{ #1 = 1, 2, \dots , #2 }
+\newcommand{\abs}[1]{\left| #1 \right| }
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
+\newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}}
+\newcommand{\skalar}[2]{\left\langle #1 , #2 \right\rangle}
+\newcommand{\munderbar}[1]{\underline{#1}}
+\renewcommand{\bar}{\overline}
+\newcommand{\LSQR}[2]{\mathrm{LSQR}(\bs{F},#1,\epsilon_{\mathrm{tol}},i_{\text{max}})~\text{mit}~\bs F = \bs{F}(N,M,\bs{X},#2)}
+\newcommand{\NFFT}[2]{\mathrm{NFFT}(N,M,\bs X,#1,#2)}
+\newcommand{\highl}[1]{\color{tuccolor@ma}#1\color{black}}
+
+%
+% Weitere Anpassungen nach Bedarf.
+%
+
+%% Navigationsleiste deaktivieren.
+%\setbeamertemplate{navigation symbols}{}
+
+%% Mathematische Sätze nummerieren.
+%\setbeamertemplate{theorems}[numbered]
+
+%% Titelzeile fett und in Standardfarbe formatieren.
+%\setbeamercolor{frametitle}{parent=normal text}
+%\setbeamerfont{frametitle}{series=\bfseries}
+
+% Metadaten
+\title[Orientierungswoche Mathematik 2018]{Orientierungswoche Mathematik 2018}
+%\subtitle{Bachelorarbeit}
+\author{FSR Mathematik}
+\date{01.10.2018}
+\institute[]{TU Chemnitz}
+\titlegraphic{\includegraphics[height=0.2\textheight]{tuc2014/logo/tuc_green}}
+\tucurl{http://www.tu-chemnitz.de/fsrmathe/}
+\setbeamertemplate{navigation symbols}{}
+\begin{document}
+\tucthreeheadlines
+\frame{\titlepage}
+\note{Anmerkungen}
+
+\tuctwoheadlines
+\nocite{*}
+%
+% Inhalt
+%
+\frame{\frametitle{Ablauf}\tableofcontents}
+\section{Begrüßung}
+
+\begin{frame}
+\begin{center}
+	\Huge \highl{Begrüßung durch den Dekan Prof.~Dr.~Christoph Helmberg}
+\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Umfragen}
+	\begin{itemize}
+		\item In welchen Studiengang seid ihr eingeschrieben?
+		\item Woher kommt ihr?
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wochenplan}
+	\only<1>{
+	\begin{table}[ht]
+		\begin{tabular}{l|l|l|l}
+			\multicolumn{2}{l|}{Montag} & \multicolumn{2}{l}{Dienstag}  \\ \hline
+			09:00 -- 12:00 & Begrüßung & 09:00 -- 10:00 & Frühstück \\
+			12:45 -- 14:15 & Grundlagen & 10:30 -- 12:00 & Logik \\
+			14:30 -- 16:00 & Elementare Funktionen & 13:00 -- 14:00 & Mentoring \\ 
+			ab 19:00 & Spieleabend & 14:00 -- 17:00 & Stundenplanung / URZ \\ 
+			 &  & ab 18:13 & Grillen  
+		\end{tabular}
+	\end{table}
+	{Mittwoch: Feiertag $\rightarrow$ Campus@Night}}
+	\only<2>{
+	\begin{table}[ht]
+	\begin{tabular}{l|l|l|l}
+		\multicolumn{2}{l|}{Donnerstag} & \multicolumn{2}{l}{Freitag}  \\ \hline
+		09:30 -- 10:30 & Fachstudienberatung & ab 10:30 & Frühstück \\
+		11:00 -- 12:30 & Lin. Algebra &  & Campustour \\
+		17:00 & Feierliche Immatrik. & & \\ 
+		ab 19:00 & Kneipentour & &  
+	\end{tabular} 
+	\end{table}
+	Räume und Campusfinder: https://www.tu-chemnitz.de/fsrmathe/ophase.php
+	}
+\end{frame}
+
+\section{Fachschaftsrat Mathematik}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+	\frametitle{Wer sind wir eigentich?}
+	\begin{block}{\vphantom{X}\smash{Fachschaft}}
+		Als Fachschaft bezeichnet man den Zusammenschluss aller Studierenden einer Fakultät bzw. eines Instituts.
+	\end{block}
+	\begin{itemize}
+		\item Der Fachschaftsrat ist die gewählte Vertretung dieser Studierenden mit bis zu 15 Mitgliedern.
+		\item Wahlen finden jedes Jahr zum Beginn des Wintersemesters statt.
+		\item Jedes Mitglied der Fachschaft kann sich aufstellen lassen*.
+		\item \highl{Ihr dürft und solltet wählen gehen!}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Wer sind wir eigentich?}
+\begin{itemize}
+	\item Im Moment hat der FSR 10 gewählte Mitglieder:
+	\item Alina Obst, Promotion Mathematik, 2 Jahre 
+	\item Lina Lehnert, Master Mathematik, 15. Semester
+	\item Christoph Robisch, Master Mathematik, 13. Semester
+	\item Michael Schmischke, Master Mathematik, 9. Semester
+	\item Svenja Schürer, Master Mathematik, 9. Semester
+	\item Fabian Taubert, Master Mathematik, 7. Semester
+	\item Nicole Scholze, Bachelor Mathematik, 9. Semester
+	\item Kira Reker, Bachelor Mathematik, 9. Semester
+	\item Erik Wünsche, Bachelor Mathematik, 7. Semester
+	\item Josie König, Bachelor Mathematik, 5. Semester
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was sind unsere Aufgaben?}
+	\begin{itemize}
+		\item Wir verfügen über etwa 1000 \euro{}  Fachschaftsmittel jedes Semester.
+		\item Das nutzen wir für diverse Veranstaltungen: O-Phase, Grillen, Weihnachtsfeier, Sporttag, \dots
+		\item Der FSR führt außerdem Lehrevaluationen durch und vertritt eure Interessen gegenüber der Fakultät (Universität).
+		\item besondere, regelmäßige Angebote:
+		\begin{itemize}
+		\item Spieleabend: jeden 2. Mittwoch ab 19 Uhr im Fakultätsgebäude
+		\item DFM: Fußball mit Turnier der Mathematikfachschaften jeden Sommer 
+		\item KoMa: Konferenz der deutschsprachigen Mathematikfachschaften
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{Wie geht studieren?}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}[t]
+\frametitle{Studium - Wie funktioniert das eigentlich?}
+\begin{block}{\vphantom{X}\smash{Ordnungen}}
+	Das Studium ist durch 2 Ordnungen geregelt: die Studienordnung und die Prüfungsordnung. Diese Dokumente sind verbindlich und ihr könnt euch darauf berufen.
+\end{block}
+\only<1>{
+\begin{itemize}
+	\item Früher oder später muss diese Dokumente jeder anschauen!
+	\item Wo finde ich meine Ordnungen? $\rightarrow$ \href{https://www.tu-chemnitz.de/mathematik/studium/studierende.php}{www.tu-chemnitz.de/mathematik/studium/studierende.php}
+	\item Welche Veranstaltungen muss ich besuchen? $\rightarrow$ Studienordnung
+	\item Welche Veranstaltungen soll ich in Semester X machen? $\rightarrow$ freie Wahl* [Studienablaufplan]
+	\item Muss ich Hausaufgaben machen? $\rightarrow$ Prüfungsvorleistungen stehen in der Modulbeschreibung
+	\item Prüfungsart, -dauer, \dots steht alles in der Modulbeschreibung festgelegt
+\end{itemize}}
+\only<2->{
+\begin{itemize}
+	\item in der Praxis: Vorlesungsverzeichnis: \href{https://www.tu-chemnitz.de/verwaltung/vlvz/}{www.tu-chemnitz.de/verwaltung/vlvz/}
+	\item versteckte Schätze: 
+	\begin{itemize}
+		\item \href{https://www.tu-chemnitz.de/mathematik/lehre/lvplan/}{www.tu-chemnitz.de/mathematik/lehre/lvplan/} \item \href{https://www.tu-chemnitz.de/mathematik/lehre/lectures/}{www.tu-chemnitz.de/mathematik/lehre/lectures/}
+	\end{itemize}
+	\item Vorsicht: Es werden dort oft auch nur Angebote reingestellt! 
+	\item Persönlicher Plan kann überall eingebunden werden.
+	\item Morgen: Stundenplanungseinheit $\rightarrow$ Wir gehen in den Computerpool und ihr könnt euren Stundenplan zusammenstellen. 
+	\item Stellt jederzeit Fragen! Dafür sind wir da.
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was sind Studienrichtungen?}
+\begin{itemize}
+	\item Wir haben die Studienrichtungen Mathematik mit Nebenfach, Wirtschaftsmathematik, Technomathematik, Mathematik mit vertiefter Informatik und Technomathematik.
+	\item Mathematik wird generell nie allein studiert, immer mit einer Art von Nebenfach.
+	\item Studienrichtungen unterscheiden sich im Anteil zwischen Nebenfach und Mathematik.
+	\item Man legt sich für eine Studienrichtung passiv über Prüfungen fest und nicht aktiv.
+	\item Ausprobieren verschiedener Studienrichtungen kann sehr hilfreich sein!
+	\item Wechsel ist jederzeit möglich! (Dafür wurde im letzten Semester hart gekämpft!)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Anfang des Semesters und schon geht's um Prüfungen \dots}
+\begin{itemize}
+	\item Prüfungen sind (wie das gesamte Studium) geregelt. Es erfolgt eine Prüfungsanmeldung im Semester (Wintersemester: Dezember).
+	\item Wie melde ich mich an? $\rightarrow$ SB-Service oder Formular \href{https://www.tu-chemnitz.de/studentenservice/zpa/pruefungsanmeldung/index.php}{www.tu-chemnitz.de/studentenservice/zpa/pruefungsanmeldung/}
+	\item Nicht alle Studiengänge können sich online anmelden. \highl{NICHT IM STUDIUM GENERALE ANMELDEN}
+	\item Prüfungsanmeldungen sind verbindlich $\rightarrow$ Wer nicht auftaucht, bekommt eine 5. 
+	\item Rücktritt von der Prüfung bis 1 Woche vor dem Klausurtermin. Bei mündlichen Prüfungen bis eine Woche vor Semesterende. \highl{Teilt das trotzdem dem Prof. mit!}
+	\item Bei Krankheit: Entweder direkt zum Arzt und den Krankenschein ins ZPA bringen oder zumindest das ZPA benachrichtigen.
+	\item Wann finden Prüfungen statt? In der zentralen Prüfungsperiode* nach dem Prüfungsplan** \href{https://www.tu-chemnitz.de/studentenservice/zpa/pruefungsplaene.php}{www.tu-chemnitz.de/studentenservice/zpa/pruefungsplaene.php}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lehrveranstaltung, Vorlesung, Übung, Seminar, \dots}
+\begin{itemize}
+	\item Eine Lehrveranstaltung umfasst mehrere Einheiten pro Woche, die Vorlesungen, Übungen, Seminare oder Praktika sein können. 
+	\item Es gibt verschiedene Standardformen: 4+4, 4+2, 2+2, 3+1, \dots
+	\item Die Prüfung einer Lehrveranstaltung kann Inhalte aus allen Teilen umfassen.
+	\item Stil von Mathematikveranstaltungen: überwiegend Tafel
+	\item sneak peek: Einführungskurs
+\end{itemize}
+\end{frame}
+
+\section{Ansprechpartner und Gremien}
+\frame{\tableofcontents[currentsection]}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+Wir sind nicht mehr in der Schule! Wenn ihr Fragen oder Probleme habt, dann müsst ihr selbst aktiv werden!
+\begin{block}{\vphantom{X}\smash{FSR Mathe}}
+	Der FSR ist eine gute erste Anlaufstelle für alle Probleme und wenn ihr nicht sicher seid, an wen ihr euch sonst wenden sollt.
+\end{block}
+\begin{itemize}
+	\item FSR-Büro: Reichenhainer Str. 41/001 [siehe Campustour]
+	\item FSR-Mail: \href{mailto:fachschaft@mathematik.tu-chemnitz.de}{fachschaft@mathematik.tu-chemnitz.de} 
+	\item FSR-Telefon: 0371/531 - 16200
+	\item Michael: Reichenhainer Str. 39/708, Telefon: 36280 
+	\item Alina: Reichenhainer Str. 39/714, Telefon: 36272
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+\begin{block}{\vphantom{X}\smash{Fakultätsrat}}
+	Der Fakultätsrat ist das wichtigste Gremium der Fakultät und die zwei studentischen Mitglieder können euch bei vielen Fragen weiterhelfen.
+\end{block}
+\begin{itemize}
+	\item Die zwei studentischen Mitglieder werden jährlich bei den Universitätswahlen gewählt.
+\end{itemize}
+aktuelle Mitglieder:
+\begin{itemize}
+	\item Michael Schmischke: Reichenhainer Str. 39/708, Telefon: 36280, \href{mailto:michael.schmischke@mathematik.tu-chemnitz.de}{michael.schmischke@mathematik.tu-chemnitz.de}   
+	\item Alina Obst: Reichenhainer Str. 39/714, Telefon: 36272, \href{mailto:alina.obst@mathematik.tu-chemnitz.de}{alina.obst@mathematik.tu-chemnitz.de}   
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+\begin{block}{\vphantom{X}\smash{Studienkommission}}
+	Die Studienkommission führt die Lehrevaluationen mit dem FSR zusammen durch und bearbeitet die Studiendokumente.
+\end{block}
+\begin{itemize}
+	\item Die studentischen Mitglieder werden durch den Fakultätsrat bestimmt.
+\end{itemize}
+aktuelle Mitglieder:
+\begin{itemize}
+	\item Michael Schmischke: \href{mailto:michael.schmischke@mathematik.tu-chemnitz.de}{michael.schmischke@mathematik.tu-chemnitz.de}   
+	\item Alina Obst: \href{mailto:alina.obst@mathematik.tu-chemnitz.de}{alina.obst@mathematik.tu-chemnitz.de}  
+	\item Felix Bartel: \href{mailto:felix.bartel@s2014.tu-chemnitz.de}{felix.bartel@s2014.tu-chemnitz.de}  
+	\item Josie König: \href{mailto:josie.könig@s2016.tu-chemnitz.de}{josie.könig@s2016.tu-chemnitz.de}  
+	\item Robert Nasdala: \href{mailto:robert.nasdala@mathematik.tu-chemnitz.de}{robert.nasdala@mathematik.tu-chemnitz.de}  
+	\item Jasmin Sternkopf: \href{mailto:jasmin.sternkopf@s2014.tu-chemnitz.de}{jasmin.sternkopf@s2014.tu-chemnitz.de}  
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+\begin{block}{\vphantom{X}\smash{Prüfungsausschuss}}
+	Der Prüfungsausschuss hat weitreichende Aufgaben um das Prüfungsgeschehen und entscheidet über Anträge.
+\end{block}
+\begin{itemize}
+	\item Die studentischen Mitglieder werden durch den Fakultätsrat bestimmt.
+\end{itemize}
+aktuelle Mitglieder:
+\begin{itemize}
+	\item Michael Schmischke (komb. Bachelor/Master, Diplom, Bachelor FiMa): \href{mailto:michael.schmischke@mathematik.tu-chemnitz.de}{michael.schmischke@mathematik.tu-chemnitz.de}   
+	\item Alina Obst (komb. Bachelor/Master, Diplom): \href{mailto:alina.obst@mathematik.tu-chemnitz.de}{alina.obst@mathematik.tu-chemnitz.de}  
+	\item Robert Nasdala (Bachelor WiMa): \href{mailto:robert.nasdala@mathematik.tu-chemnitz.de}{robert.nasdala@mathematik.tu-chemnitz.de}  
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+\begin{block}{\vphantom{X}\smash{Strukturkommission}}
+	Die Strukturkommission gibt Empfehlungen zur Besetzung von Haushaltsstellen.
+\end{block}
+\begin{itemize}
+	\item Das studentische Mitglied wird durch den Fakultätsrat bestimmt.
+\end{itemize}
+aktuelles Mitglied:
+\begin{itemize}
+	\item Michael Schmischke: \href{mailto:michael.schmischke@mathematik.tu-chemnitz.de}{michael.schmischke@mathematik.tu-chemnitz.de}   
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+\begin{block}{\vphantom{X}\smash{Stipendienkommission}}
+	Die Stipendienkommission befasst sich mit der Vergabe des Deutschlandstipendiums.
+\end{block}
+\begin{itemize}
+	\item Das studentische Mitglied wird durch den Fakultätsrat bestimmt.
+\end{itemize}
+aktuelles Mitglied:
+\begin{itemize}
+	\item Michael Schmischke: \href{mailto:michael.schmischke@mathematik.tu-chemnitz.de}{michael.schmischke@mathematik.tu-chemnitz.de}   
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fragen -- An wen kann ich mich wenden?}
+\begin{block}{\vphantom{X}\smash{Haushaltskommission}}
+	Die Haushaltskommission befasst sich mit dem Haushalt der Fakultät und dessen Verteilung.
+\end{block}
+\begin{itemize}
+	\item Das studentische Mitglied wird durch den Fakultätsrat bestimmt.
+\end{itemize}
+aktuelles Mitglied:
+\begin{itemize}
+	\item Kira Reker: \href{mailto:kira.reker@s2014.tu-chemnitz.de}{kira.reker@s2014.tu-chemnitz.de}   
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Außerhalb der Fakultät -- Was gibt es noch?}
+\begin{block}{\vphantom{X}\smash{StuRa}}
+	Der Student\_innenenrat (StuRa) ist die Vertretung aller Studierenden in der verfassten Studierendenschaft und kümmert sich z.B. um das Semesterticket.
+\end{block}
+\begin{itemize}
+	\item Jede Fachschaft kann eine gewisse Zahl an Mitgliedern stellen, diese werden durch den FSR gewählt
+\end{itemize}
+aktuelles Mitglied:
+\begin{itemize}
+	\item niemand
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Außerhalb der Fakultät -- Was gibt es noch?}
+\begin{block}{\vphantom{X}\smash{Senat}}
+	Der Senat ist verantwortlich für Themen, welche die gesamte Universität betreffen. Seine Zustimmung ist für viele Entscheidungen erforderlich.
+\end{block}
+\begin{itemize}
+	\item Die studentischen Mitglieder werden jedes Jahr bei den Universitätswahlen gewählt.
+\end{itemize}
+\end{frame}
+
+\section{Sonstiges}
+
+\begin{frame}
+\frametitle{Was ist für euch noch interessant?}
+\begin{block}{\vphantom{X}\smash{URZ}}
+	Das Universitätsrechenzentrum ist verantwortlich für die digitale Infrastruktur der Universität, darunter zum Beispiel auch eure Mails.
+\end{block}
+\begin{itemize}
+	\item Ihr solltet eine Nutzungsvereinbarung unterschreiben, dann ist euer Nutzerkürzel freigeschalten.
+	\item Hat das jemand noch nicht getan?
+	\item Ihr könnt dann fast alle Computerpools mit diesem Kürzel nutzen (außer FRIZ und MRZ).
+	\item Einführung in die Dienste: Morgen
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was ist für euch noch interessant?}
+\begin{block}{\vphantom{X}\smash{MRZ}}
+	Das mathematische Rechenzentrum ist verantwortlich für die digitale Infrastruktur der Fakultät für Mathematik, darunter den Pool Rh39/738.
+\end{block}
+\begin{itemize}
+	\item Ihr müsst euer Nutzerkennzeichen dort manuell freischalten lassen. \href{https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/428277761}{bildungsportal.sachsen.de/opal/auth/RepositoryEntry/428277761}
+	\item Bitte heute noch durchführen!
+	\item Ihr könnt dann die Computer innerhalb der Fakultät nutzen.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was ist für euch noch interessant?}
+\begin{block}{\vphantom{X}\smash{Bibliothek}}
+	Der Name sagt schon alles, oder?
+\end{block}
+\begin{itemize}
+	\item Euer Studentenausweis ist gleichzeitig euer Bibliotheksausweis.
+	\item Die Blibliothek hat mehrere Teile. Wir zeigen euch alles zur Campustour.
+	\item Verlängerung geht online, auch viele E-Books \href{https://www.tu-chemnitz.de/ub/}{www.tu-chemnitz.de/ub/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Was ist für euch noch interessant?}
+\begin{block}{\vphantom{X}\smash{Mensa}}
+	Hier gibt's Essen. Wir haben zwei Mensen, davon eine hier am Campus Reichenhainer Str. und eine am Universitätsteil Straße der Nationen.
+\end{block}
+\begin{itemize}
+	\item Euer Studierendenausweis ist eure Mensakarte. Ihr könnt an diversen Automaten in der Mensa und anderswo Geld aufladen.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Mentoring}
+\begin{block}{\vphantom{X}\smash{Mentoring}}
+	Wir bieten dieses Jahr zum zweiten Mal ein Programm an, bei welchem erfahrene Studierende als Mentoren von ein bis drei Erstis fungieren. Das Programm wird von der Fakultät und TU4U unterstützt.
+\end{block}
+\begin{itemize}
+	\item Wir empfehlen, dass jeder zumindest die Einführungsveranstaltung besucht, welche morgen von 13 -- 14 Uhr stattfindet.
+\end{itemize}
+\end{frame}
+
+\end{document}
