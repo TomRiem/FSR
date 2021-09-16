@@ -3,5 +3,5 @@
 \beamer@sectionintoc {2}{Begrüßung}{3}{0}{2}
 \beamer@sectionintoc {3}{Fachschaftsrat Mathematik}{7}{0}{3}
 \beamer@sectionintoc {4}{Wie geht das Studieren?}{11}{0}{4}
-\beamer@sectionintoc {5}{Ansprechpartner und Gremien}{17}{0}{5}
-\beamer@sectionintoc {6}{Sonstiges}{27}{0}{6}
+\beamer@sectionintoc {5}{Ansprechpartner und Gremien}{21}{0}{5}
+\beamer@sectionintoc {6}{Sonstiges}{31}{0}{6}
