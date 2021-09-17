@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  17 SEP 2021 09:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.11) (preloaded format=pdflatex 2020.11.26)  17 SEP 2021 11:26
 entering extended mode
 **"c:/Users/rieme/FSR/O-Phase 2021/ophase-master/vortrag/main_2021.tex"
 ("c:/Users/rieme/FSR/O-Phase 2021/ophase-master/vortrag/main_2021.tex"
@@ -1302,119 +1302,138 @@ Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 3
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 410.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 399.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [23
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 422.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 420.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [24
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 442.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 433.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [25
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 460.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 455.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [26
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 474.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 475.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [27
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 492.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 494.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [28
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 510.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 514.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [29
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 522.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 534.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [30
 
 ]
+File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
+<use tuc2019/logo/tuc_white_margin.pdf>
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 546.
+(pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
+ [31
+
+]
 
 pdfTeX warning: pdflatex (file c:/Users/rieme/FSR/O-Phase 2021/ophase-master/vortrag/Initiativen.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Initiativen.pdf, id=318, 845.07718pt x 597.55246pt>
+<Initiativen.pdf, id=327, 845.07718pt x 597.55246pt>
 File: Initiativen.pdf Graphic file (type pdf)
 <use Initiativen.pdf>
-Package pdftex.def Info: Initiativen.pdf  used on input line 542.
+Package pdftex.def Info: Initiativen.pdf  used on input line 566.
 (pdftex.def)             Requested size: 312.9803pt x 169.4939pt.
-<visitenkarte.pdf, id=320, 597.53635pt x 845.04686pt>
+<visitenkarte.pdf, id=329, 597.53635pt x 845.04686pt>
 File: visitenkarte.pdf Graphic file (type pdf)
 <use visitenkarte.pdf>
-Package pdftex.def Info: visitenkarte.pdf  used on input line 542.
+Package pdftex.def Info: visitenkarte.pdf  used on input line 566.
 (pdftex.def)             Requested size: 142.29193pt x 119.50133pt.
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 542.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 566.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
-[31
+[32
 
  <c:/Users/rieme/FSR/O-Phase 2021/ophase-master/vortrag/Initiativen.pdf> <c:/Users/rieme/FSR/O-Phase 2021/ophase-master/vortrag/visitenkarte.pdf>]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 559.
-(pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
- [32
-
-]
-File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
-<use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 573.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 583.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [33
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 587.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 597.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [34
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 592.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 611.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [35
 
 ]
+<bilder/Buch.jpg, id=412, 295.1025pt x 446.66875pt>
+File: bilder/Buch.jpg Graphic file (type jpg)
+<use bilder/Buch.jpg>
+Package pdftex.def Info: bilder/Buch.jpg  used on input line 625.
+(pdftex.def)             Requested size: 71.13188pt x 107.65933pt.
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 604.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 625.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
  [36
+
+ <c:/Users/rieme/FSR/O-Phase 2021/ophase-master/vortrag/bilder/Buch.jpg>]
+File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
+<use tuc2019/logo/tuc_white_margin.pdf>
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 637.
+(pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
+ [37
 
 ]
 File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
 <use tuc2019/logo/tuc_white_margin.pdf>
-Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 616.
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 649.
 (pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
- [37
+ [38
+
+]
+File: tuc2019/logo/tuc_white_margin.pdf Graphic file (type pdf)
+<use tuc2019/logo/tuc_white_margin.pdf>
+Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 661.
+(pdftex.def)             Requested size: 45.89005pt x 30.04628pt.
+ [39
 
 ]
 \tf@nav=\write6
@@ -1428,20 +1447,20 @@ Package pdftex.def Info: tuc2019/logo/tuc_white_margin.pdf  used on input line 6
 
  ("c:/Users\rieme\FSR\O-Phase 2021\ophase-master\vortrag\main_2021.aux")
 Package rerunfilecheck Info: File `main_2021.out' has not changed.
-(rerunfilecheck)             Checksum: 2C9B041F0219DD56C4BE3316DBAD6762;450.
+(rerunfilecheck)             Checksum: 2DC386055F16500EA839684DF6C192D3;450.
  ) 
 Here is how much of TeX's memory you used:
- 25728 strings out of 479799
- 505334 string characters out of 2867786
+ 25744 strings out of 479799
+ 505520 string characters out of 2867786
  811719 words of memory out of 3000000
- 41994 multiletter control sequences out of 15000+200000
+ 42003 multiletter control sequences out of 15000+200000
  591832 words of font info for 69 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  125i,19n,126p,470b,861s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/roboto/rbto_b5rac7.enc}<C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/google/roboto/Roboto-Bold.pfb><C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/google/roboto/Roboto-Italic.pfb><C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/google/roboto/Roboto-Regular.pfb><C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/eurosym/feymr10.pfb><C:/Users/rieme/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "c:/Users\rieme\FSR\O-Phase 2021\ophase-master\vortrag\main_2021.pdf" (37 pages, 452710 bytes).
+Output written on "c:/Users\rieme\FSR\O-Phase 2021\ophase-master\vortrag\main_2021.pdf" (39 pages, 475982 bytes).
 PDF statistics:
- 474 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
- 134 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 492 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
