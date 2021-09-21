@@ -14,3 +14,10 @@ O-Phase 2021/ophase-master/vortrag/main_2021.fdb_latexmk
 O-Phase 2021/ophase-master/vortrag/main_2021.log
 O-Phase 2021/ophase-master/vortrag/main_2021.pdf
 O-Phase 2021/ophase-master/vortrag/main_2021.synctex.gz
+*.aux
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
+*.gz
