@@ -1,0 +1,178 @@
+%Dieses Dokument soll zum Rumspielen dienen, falls Sie noch keine Erfahrung mit Latex haben. Am besten den Quelltext und die Ausgabe zusammen angucken.
+%Alles hinter dem ``%'' Zeichen ist Kommentar und wird beim Kompilieren nicht berücksichtigt.
+
+%Den folgenden Kram erstmal überspringen, von hier...
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{german, tikz}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{satz}[lemma]{Satz}
+\newtheorem{koro}[lemma]{Korollar}
+\newtheorem{bem}[lemma]{Bemerkung}
+\newtheorem{definition}[lemma]{Definition}
+\newenvironment{beweis}{\begin{proof}[Beweis.]}{\end{proof}}
+\numberwithin{lemma}{section}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\pa}{\par \vspace{2mm} }
+\newcommand{\foral}{ \ \forall }
+\newcommand{\summe}[2]{ \sum_{#1}^{#2} }
+
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\F}{\mathcal{F}}
+%...bis hier.
+
+
+
+%Hier kann man Titel, Namen etc. eintragen.
+\title{Elementare Funktionen}
+
+\author{Michael Schmischke\\
+Technische Universit\"at Chemnitz
+}
+
+\begin{document}
+\maketitle %Titelzeile erzeugen
+
+%Das Abstract ist eine kurze Zusammenfassung des Inhalts.
+\begin{abstract}
+	\noindent Einf\"uhrung in Grundlagen der Analysis. 
+\end{abstract}
+
+%Jetzt kommen ein paar gebräuchliche Umgebungen. Sie werden automatisch numeriert.
+
+\section{Abbildungen}
+
+Wir betrachten Funktionen (bzw. Abbildungen) um Mengen miteinander in Beziehung zu setzen.
+
+\begin{definition}\label{def}
+Seien $D$ und $W$ nichtleere Mengen. Eine \textbf{Abbildung} \[ f: D \to W, x \mapsto f(x) \] ist eine eindeutige Zuordnung der \textbf{Definitionsmenge} $D$ zum \textbf{Wertebereich} $W$. Dies ist gleichbedeutend damit, dass jedem Element $x \in D$ ein Element $y := f(x) \in W$ zugeordnet wird.
+\end{definition}
+
+\begin{bem}
+Eine Abbildung ist i.A. keine eineindeutige Zuordnung, d.h. es kann ein $y \in W$ geben mit $\forall x \in D : f(x) \neq y$.
+\end{bem}
+
+\begin{definition}
+Zunächst möchten wir einige wichtige Begriffe im Zusammenhang mit Abbildungen definieren. Sei dafür $f$ wie in \cref{def} gegeben.
+
+\begin{tabular}{lll}
+ für $x \in D$ & heißt $f(x)$ & Bild von $x$ \\
+ für $A \subset D$ & heißt $f(A)$ & Bild(menge) von $A$ \\
+ für $A = D$ & heißt $f(A)=f(D)$ & Bild von $f$ \\
+ für $y \in W$ & heißt $f^{-1}(y)$ & Urbild von $y$, Faser über $y$ \\
+ für $B \subset W$ & heißt $f^{-1}(B)$ & Urbild von $B$ 
+\end{tabular}
+
+Mengenklammern werden bei Urbildern häufig weggelassen. Das Urbild stellt allerdings keine Funktion von W nach D dar. Man könnte sie allerdings als Funktion von der Potenzmenge von W in die Potenzmenge von D auffassen.
+\end{definition}
+
+\begin{definition}
+Eine Teilmenge $\Gamma \subset A \times B$ heißt \textbf{Graph} einer Abbildung, wenn
+\begin{enumerate}[label={\alph*)}]
+\item $\foral x \in A \, \exists y \in B : (x,y) \in \Gamma$ und
+\item $(x,y),(x,y')\in\Gamma \Rightarrow y = y'$
+\end{enumerate}
+erfüllt sind.
+\end{definition}
+
+\section{Eigenschaften}
+
+In diesem Abschnitt betrachten wir grundlegende Eigenschaften von Abbildungen und setzen sie in Beziehung zueinander.
+
+\begin{definition}
+Eine Abbildung $f: D \to W, x \mapsto f(x)$ heißt \textbf{injektiv} (eineindeutig), wenn eine der folgenden äquivalenten Bedingungen gilt.
+\begin{enumerate}
+\item $\forall y \in W$ existiert höchstens ein $x \in D$ mit $f(x)=y$
+\item $|f^{-1}(\{y\})| \leq 1 \foral y \in W$
+\item $x \neq x' \Rightarrow f(x) \neq f(x')$
+\item $f(x) = f(x') \Rightarrow x = x'$
+\end{enumerate}
+Eine Abbildung $f: D \to W, x \mapsto f(x)$ heißt \textbf{surjektiv} (Abbildung auf $W$), wenn eine der folgenden äquivalenten Bedingungen gilt.
+\begin{enumerate}
+\item $\forall y \in W \, \exists x \in D : f(x)=y$
+\item $f^{-1}(\{y\}) \neq \emptyset \foral y \in W$
+\item $f(D) = W$
+\end{enumerate}
+Eine Abbildung $f: D \to W, x \mapsto f(x)$ heißt \textbf{bijektiv} (eineindeutige Abbildung auf $W$), wenn eine der folgenden äquivalenten Bedingungen gilt.
+\begin{enumerate}
+\item $\forall y \in W \, \exists ! x \in D : f(x)=y$
+\item $|f^{-1}(\{y\})| = 1 \foral y \in W$
+\item f ist injektiv und surjektiv
+\end{enumerate}
+\end{definition}
+
+\begin{satz}
+Seien $D$ und $S$ endliche Mengen mit $|D|=|S|=n\in\mathbb{N}$. Dann gilt für jede Abbildung $f: D \to S$  
+surjektiv $\Leftrightarrow$ injektiv $\Leftrightarrow$ bijektiv.
+\end{satz}
+
+\begin{beweis}
+Diesen Satz beweisen wir über einen Ringschluss. Offensichtlich gilt bijektiv $\Rightarrow$ injektiv. \pa
+Injektiv bedeutet, jedes Element aus $S$ hat ein Urbild mit $0$ Elementen oder $1$ Element. Ein Urbild kann in unserem Fall aber nicht aus $0$ Elementen bestehen, da es sonst Elemente aus $D$ geben würde, die man nicht abbildet. Damit ist die Abbildung auch surjektiv, wenn sie injektiv ist. \pa
+Surjektiv bedeutet, dass jedes Urbild mindestens ein Element enthält. Würde ein Urbild allerdings mehr als $1$ Element enthalten, dann gäbe es ein Element aus $S$ mit einem leeren Urbild, was ein Widerspruch ist. Damit ist die Abbildung bijektiv, wenn sie surjektiv ist.
+\end{beweis}
+
+\section{Komposition und Umkehrabbildung}
+
+\begin{definition}
+Seien $f: A \to B$ und $g: B \to C$ zwei Abbildungen. Die \textbf{Komposition} oder das Produkt $g \circ f$ ist die Abbildung, welche durch Hintereinanderausführung von f und g entsteht:
+\begin{align*}
+	g \circ f: A \to C \\
+	x \mapsto g(f(x))\\
+	(g \circ f)(x) = g(f(x))
+\end{align*} \par
+\end{definition}
+
+Beispiel: $g(x) = x^2, f(x) = e^x, (g \circ f)(x) = g(f(x)) = e^{2x}$
+
+\begin{definition}
+Eine Abbildung $f$ heißt \textbf{Identität} auf einer Menge $D$, auch $id_D$ genannt, wenn sie jedes Element von D auf sich selbst abbildet. 
+\end{definition}
+
+\begin{satz}
+Sei $D$ eine Menge. Die Identität $id_D: D \to D, x \mapsto x$ ist eine bijektive Abbildung.
+\end{satz}
+
+\begin{beweis}
+Wir verwenden die äquivalente Bedingung 2 aus Kapitel 2. Sei $d\in D$ beliebig. Da jedes Element auf sich selbst abgebildet wird, gilt $id_D^{-1}(\{d\}) = \{d\}$ und somit ist die Bedingung erfüllt.
+\end{beweis}
+
+\begin{satz}
+Sei $f: D \to W, x \mapsto f(x)$ eine bijektive Abbildung. Dann gibt es genau eine Abbildung $g: W \to D$ mit der Eigenschaft
+\begin{equation*}
+f \circ g = id_W,\, g \circ f = id_D
+\end{equation*}
+Diese eindeutige Abbildung wird auch Umkehrabbildung oder inverse Abbildung genannt und oft mit $f^{-1}$ bezeichnet. Sie ist aber nicht mit dem Urbild zu verwechseln.
+\end{satz}
+
+\begin{beweis}
+%$f$ ist eine bijektive Abbildung $\Rightarrow \forall b \in B \, \exists ! a \in A : f^{-1}(\{b\})=\{a\}$ \\
+Wir definieren $h: W \to D, y \mapsto f^{-1}(\{y\})$, wobei mit $f^{-1}(\{y\})$ das eindeutige Element der Menge gemeint ist. Nun gilt
+\begin{equation*}
+f(h(y)) = f(f^{-1}(\{y\})) = y.
+\end{equation*}
+$h$ ist also unsere gesuchte Abbildung $g$, da offenbar gilt $f \circ h = id_W$. Analog zeigt man $id_D$. \\
+Angenommen $g$ und $\tilde{g}$ haben beide die Eigenschaft. Dann ist für beliebiges $x \in D$ mit $y := f(x)$
+\begin{equation*}
+g(f(x)) = g(y) = \tilde{g}(y) = \tilde{g}(f(x)).
+\end{equation*}
+\end{beweis}
+
+\begin{satz}
+Die Umkehrabbildung einer bijektiven Abbildung ist bijektiv.
+\end{satz}
+
+\end{document}
